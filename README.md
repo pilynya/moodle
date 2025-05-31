@@ -4,6 +4,7 @@
 
 dnf install httpd -y<br/>
 dnf install mariadb-server mariadb -y<br/>
+install php php-common php-mysql php-gd php-intl php-curl php-xmlrpc php-ldap php-apc php-mbstring php-dom php-soap php-zip -y
 systemctl enable --now httpd<br/>
 systemctl enable --now mariadb<br/>
 mariadb -u root<br/>
@@ -38,6 +39,7 @@ tar -xf ( и файл который скачался табом)<br/>
 ![image](https://github.com/user-attachments/assets/bd54c317-9b97-49ab-ae68-738058680991)
 
 Перезапуск службы httpd: systemctl restart httpd <br/>
+Перезапуск службы php: systemctl restart php-fpm <br/>
 клиента HQ-CLI в браузере зайдите на страницу http://192.168.100.2/ и начните установку moodle в графическом режиме, заполнив параметры из предыдущих шагов<br/>
 
 ![image](https://github.com/user-attachments/assets/5cbf2df0-2c6c-4d66-9199-f535ff616221)
