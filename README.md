@@ -4,9 +4,10 @@
 
 dnf install httpd -y<br/>
 dnf install mariadb-server mariadb -y<br/>
-install php php-common php-mysql php-gd php-intl php-curl php-xmlrpc php-ldap php-apc php-mbstring php-dom php-soap php-zip -y
+dnf install php php-common php-mysql php-gd php-intl php-curl php-xmlrpc php-ldap php-apc php-mbstring php-dom php-soap php-zip -y
 systemctl enable --now httpd<br/>
 systemctl enable --now mariadb<br/>
+systemctl enable --now php-fpm<br/>
 mariadb -u root<br/>
 create database moodle;<br/>
 create user moodle identified by 'P@ssw0rd';<br/>
